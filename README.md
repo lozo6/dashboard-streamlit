@@ -31,3 +31,35 @@ I got my data from kaggle:
 https://www.kaggle.com/datasets/gregorut/videogamesales
 
 https://www.kaggle.com/datasets/unsdsn/world-happiness
+
+
+## How to install pyenv in Ubuntu
+
+Install pyenv by using `curl https://pyenv.run | bash`
+
+Enter this code to add into `.bashrc`
+```yaml
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+```
+
+Then restart shell with `exec "$SHELL"`
+
+Confirm pyenv was installed with `pyenv -V`
+
+## Install Python
+
+All dependencies require at least Python 3.9
+
+Assignment was done in Python 3.9.4
+
+Please use the following commands to install Python 3.9.4
+
+```yaml
+pyenv install 3.9.4
+
+pyenv global 3.9.4
+```
+
+Confirm Python 3.9.4 was installed globalled with `python3 -V`
