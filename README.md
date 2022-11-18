@@ -44,6 +44,13 @@ echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 ```
 
+Lastly run this code to install all pyenv/python dependencies for Ubuntu (works for WSL2)
+```yaml
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+```
+
 Then restart shell with `exec "$SHELL"`
 
 Confirm pyenv was installed with `pyenv -V`
