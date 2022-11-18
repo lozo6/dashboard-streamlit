@@ -26,4 +26,8 @@ at least 2 charts (e.g., line, area, bar, scatter plot)
 
 ## Dataset
 
-I got my data from kaggle: https://www.kaggle.com/datasets/vivovinco/league-of-legends-champion-stats?resource=download
+I got my data from kaggle:
+
+https://www.kaggle.com/datasets/gregorut/videogamesales
+
+https://www.kaggle.com/datasets/unsdsn/world-happiness

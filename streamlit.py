@@ -1,25 +1,31 @@
 import pandas as pd
 import streamlit as st
 
-riot_data = 'data/LoL_Champion_Data.csv'
-twitter_data = 'data/twitter_stocks.csv'
+videoGame_df = pd.read_csv('data/vgSales.csv')
+happiness_df = pd.read_csv('data/happinessReport.csv')
 
-def get_data(data):
-    return pd.read_csv(data)
+st.header('Video Game Sales Data & Trending YouTube Statistics')
 
-# reading dataset
-league_df = get_data(riot_data)
-twitter_df = get_data(twitter_data)
+# checkbox to see dataframes
+if st.checkbox('Video Game Sales Data'):
+    st.dataframe(videoGame_df)
+if st.checkbox('Happiness Report'):
+    st.dataframe(happiness_df)
 
-# creating dashboard title
-st.header('League of Legends & Twitter Stocks Data')
 
-# adding dashboard caption
-st.caption('History of League of Legends & Twitter Stocks Data')
+# creating charts for data visualization
+st.subheader('Video Game Sales by Genre')
+vgGenre = videoGame_df['Genre'].value_counts()
+st.bar_chart(vgGenre)
+st.caption('Displays a bar chart of number genre during sales')
 
-# displaying each dataframe
-if st.checkbox('League of Legends Data'):
-    st.dataframe(league_df)
+st.subheader('Happiness Report by Score')
+happinessScore = happiness_df['score']
+st.line_chart(happinessScore)
+st.caption('Displays a line chart of scores countries')
 
-if st.checkbox('Twitter Stock'):
-    st.dataframe(twitter_data)
+code = '''Code behind the second chart for Trending YouTube Statistics
+happinessScore = happiness_df['score']
+st.line_chart(happinessScore)
+'''
+st.code(code, language='python')
