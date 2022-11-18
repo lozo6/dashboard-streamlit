@@ -24,7 +24,7 @@ happinessScore = happiness_df['score']
 st.line_chart(happinessScore)
 st.caption('Displays a line chart of scores countries')
 
-code = '''Code behind the second chart for Trending YouTube Statistics
+code = '''Code behind the first chart for Video Game Sales
 happinessScore = happiness_df['score']
 st.line_chart(happinessScore)
 '''
